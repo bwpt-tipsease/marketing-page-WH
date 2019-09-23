@@ -10,7 +10,8 @@ html {
 }
 
 .bg-image {
-  height: 95%;
+  height: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,11 +19,13 @@ html {
 }
 
 .img1 {
-  background-image: url("/img/watch.jpg");
+  background-image: url("/./img/watch.jpg");
+  
 }
 .img2 {
-  background-image: url("/img/bg1.jpg");
+  background-image: url("/./img/bg1.jpg");
 }
+
 .nav-bar {
   display: flex;
   justify-content: space-around;
@@ -33,10 +36,19 @@ html {
   opacity: 0.9;
   filter: alpha(opacity=90);
   position: fixed;
+  @media(max-width: 500px) {
+  flex-direction: column;
+  
+  }
   h1 {
     font-family: "Rock Salt", cursive;
     font-size: 33px;
     margin: auto 0;
+    @media(max-width: 500px) {
+      display: flex;
+      font-size: 20px;
+      justify-content: center;
+    }
   }
 }
 
@@ -46,6 +58,11 @@ html {
   justify-content: space-between;
   align-items: baseline;
   margin-top: 25px;
+  @media(max-width: 500px) {
+   margin-top: 0px;
+   justify-content: space-evenly;
+   width: 100%;
+  }
   a {
     text-decoration: none;
     color: green;
@@ -55,7 +72,7 @@ html {
     }
   }
 }
-
+#nav-content {
 button {
   width: 100px;
   height: 30px;
@@ -67,10 +84,14 @@ button {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
+  @media(max-width: 500px) {
+    display: none;
+  }
   &:hover {
     background-color: black;
     color: grey;
   }
+}
 }
 
 .header-text {
@@ -79,6 +100,7 @@ button {
   align-content: center;
   height: 100%;
   justify-content: center;
+
   .CTA {
     width: 350px;
     text-align: justify;
@@ -94,6 +116,7 @@ button {
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         cursor: pointer;
+        
         &:hover {
           background-color: black;
           color: green;
@@ -113,10 +136,17 @@ button {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  @media(max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  }
   .information {
     width: 300px;
     margin-top: 40px;
     line-height: 1.5rem;
+    @media(max-width: 500px) {
+     margin-top: 10px;
+    }
     img {
       height: 40px;
       width: 40px;

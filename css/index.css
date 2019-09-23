@@ -8,7 +8,8 @@ html {
   box-sizing: border-box;
 }
 .bg-image {
-  height: 95%;
+  height: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,10 +32,22 @@ html {
   filter: alpha(opacity=90);
   position: fixed;
 }
+@media (max-width: 500px) {
+  .nav-bar {
+    flex-direction: column;
+  }
+}
 .nav-bar h1 {
   font-family: "Rock Salt", cursive;
   font-size: 33px;
   margin: auto 0;
+}
+@media (max-width: 500px) {
+  .nav-bar h1 {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+  }
 }
 #nav-content {
   display: flex;
@@ -42,6 +55,13 @@ html {
   justify-content: space-between;
   align-items: baseline;
   margin-top: 25px;
+}
+@media (max-width: 500px) {
+  #nav-content {
+    margin-top: 0px;
+    justify-content: space-evenly;
+    width: 100%;
+  }
 }
 #nav-content a {
   text-decoration: none;
@@ -51,7 +71,7 @@ html {
 #nav-content a:hover {
   color: white;
 }
-button {
+#nav-content button {
   width: 100px;
   height: 30px;
   font-size: 14px;
@@ -63,7 +83,12 @@ button {
   transition-duration: 0.4s;
   cursor: pointer;
 }
-button:hover {
+@media (max-width: 500px) {
+  #nav-content button {
+    display: none;
+  }
+}
+#nav-content button:hover {
   background-color: black;
   color: grey;
 }
@@ -104,10 +129,21 @@ button:hover {
   width: 100%;
   justify-content: space-evenly;
 }
+@media (max-width: 500px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .services .information {
   width: 300px;
   margin-top: 40px;
   line-height: 1.5rem;
+}
+@media (max-width: 500px) {
+  .services .information {
+    margin-top: 10px;
+  }
 }
 .services .information img {
   height: 40px;
