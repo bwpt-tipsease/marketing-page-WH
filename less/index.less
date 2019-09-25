@@ -16,14 +16,15 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  @media(max-width: 500px) {
+ height: 100%;
+ width: 100%;
+    }
 }
 
 .img1 {
   background-image: url("/./img/watch.jpg");
   
-}
-.img2 {
-  background-image: url("/./img/bg1.jpg");
 }
 
 .nav-bar {
@@ -38,7 +39,6 @@ html {
   position: fixed;
   @media(max-width: 500px) {
   flex-direction: column;
-  
   }
   h1 {
     font-family: "Rock Salt", cursive;
@@ -87,6 +87,7 @@ button {
   @media(max-width: 500px) {
     display: none;
   }
+
   &:hover {
     background-color: black;
     color: grey;
@@ -105,6 +106,19 @@ button {
     width: 350px;
     text-align: justify;
     margin: 0 20px 0 20px;
+    .login {
+      @media(min-width: 501px) {
+        display: none;
+      }
+    }
+  }
+  .ctabuttons {
+    display: flex;
+    flex-direction: column;
+    .login{
+      margin-top: 10px;
+    }
+  }
     button {
         width: 150px;
         height: 50px;
@@ -116,14 +130,15 @@ button {
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         cursor: pointer;
-        
         &:hover {
           background-color: black;
           color: green;
         }
       }
     }
-  }
+  
+
+
 
   .CTA {
     h2{ 
@@ -176,3 +191,13 @@ button {
 }
 }
 
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: green;
+text-align: center;
+p {
+  padding: 10px;
+}
+}

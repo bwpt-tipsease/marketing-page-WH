@@ -15,11 +15,14 @@ html {
   background-size: cover;
   background-attachment: fixed;
 }
+@media (max-width: 500px) {
+  .bg-image {
+    height: 100%;
+    width: 100%;
+  }
+}
 .img1 {
   background-image: url("/img/watch.jpg");
-}
-.img2 {
-  background-image: url("/img/bg1.jpg");
 }
 .nav-bar {
   display: flex;
@@ -104,7 +107,19 @@ html {
   text-align: justify;
   margin: 0 20px 0 20px;
 }
-.header-text .CTA button {
+@media (min-width: 501px) {
+  .header-text .CTA .login {
+    display: none;
+  }
+}
+.header-text .ctabuttons {
+  display: flex;
+  flex-direction: column;
+}
+.header-text .ctabuttons .login {
+  margin-top: 10px;
+}
+.header-text button {
   width: 150px;
   height: 50px;
   font-size: 20px;
@@ -116,7 +131,7 @@ html {
   transition-duration: 0.4s;
   cursor: pointer;
 }
-.header-text .CTA button:hover {
+.header-text button:hover {
   background-color: black;
   color: green;
 }
@@ -163,4 +178,14 @@ html {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: green;
+  text-align: center;
+}
+footer p {
+  padding: 10px;
 }
