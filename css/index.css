@@ -7,19 +7,39 @@ html {
 * {
   box-sizing: border-box;
 }
+h1 {
+  font-family: "Rock Salt", cursive;
+}
+h2,
+h3,
+h4 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.3rem;
+}
 .bg-image {
   height: 100%;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
+}
+@media (max-width: 500px) {
+  .bg-image {
+    max-width: 100%;
+  }
 }
 .img1 {
   background-image: url("/img/watch.jpg");
-}
-.img2 {
-  background-image: url("/img/bg1.jpg");
 }
 .nav-bar {
   display: flex;
@@ -28,17 +48,15 @@ html {
   width: 100%;
   background-color: black;
   color: green;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-  position: fixed;
 }
 @media (max-width: 500px) {
   .nav-bar {
     flex-direction: column;
+    height: 90px;
+    justify-content: space-evenly;
   }
 }
 .nav-bar h1 {
-  font-family: "Rock Salt", cursive;
   font-size: 33px;
   margin: auto 0;
 }
@@ -47,6 +65,11 @@ html {
     display: flex;
     font-size: 20px;
     justify-content: center;
+  }
+}
+@media (max-width: 800px) {
+  .nav-bar h1 {
+    margin: 0 20px 0 20px;
   }
 }
 #nav-content {
@@ -58,7 +81,7 @@ html {
 }
 @media (max-width: 500px) {
   #nav-content {
-    margin-top: 0px;
+    margin-top: 0;
     justify-content: space-evenly;
     width: 100%;
   }
@@ -67,14 +90,15 @@ html {
   text-decoration: none;
   color: green;
   cursor: pointer;
+  font-size: 16px;
 }
 #nav-content a:hover {
   color: white;
 }
-#nav-content button {
+#nav-content .btn-nav {
   width: 100px;
   height: 30px;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 10px;
   border: 1px gray solid;
   font-weight: bold;
@@ -84,45 +108,147 @@ html {
   cursor: pointer;
 }
 @media (max-width: 500px) {
-  #nav-content button {
+  #nav-content .btn-nav {
     display: none;
   }
 }
-#nav-content button:hover {
-  background-color: black;
-  color: grey;
+#nav-content .btn-nav a {
+  color: black;
+  padding: 10px;
 }
-.header-text {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  height: 100%;
-  justify-content: center;
-}
-.header-text .CTA {
-  width: 350px;
-  text-align: justify;
-  margin: 0 20px 0 20px;
-}
-.header-text .CTA button {
-  width: 150px;
-  height: 50px;
-  font-size: 20px;
-  border-radius: 10px;
-  border: 1px green solid;
-  font-weight: bold;
+#nav-content .btn-nav:hover {
+  color: black;
   background-color: green;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  cursor: pointer;
+  border: 1px green solid;
 }
-.header-text .CTA button:hover {
+footer {
+  width: 100%;
+  height: 40px;
   background-color: black;
   color: green;
+  text-align: center;
 }
-.CTA h2 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 30px;
+footer p {
+  padding: 10px;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.about-tips {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  height: 90%;
+  width: 100%;
+  justify-content: center;
+}
+.about-tips .black-box {
+  width: 400px;
+  height: 450px;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+@media (max-width: 500px) {
+  .about-tips .black-box {
+    width: 95%;
+    border-radius: 10px;
+    margin: 0 5px;
+    padding: 0 5px;
+  }
+}
+.about-tips .black-box .CTA {
+  width: 350px;
+  text-align: justify;
+  margin: 0 auto;
+  color: green;
+}
+@media (max-width: 500px) {
+  .about-tips .black-box .CTA {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  .about-tips .black-box .CTA .ctabuttons {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    max-width: 100%;
+  }
+}
+.CTA p {
+  font-size: 1rem;
+  padding: 5px;
+}
+i {
+  border: solid green;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+i .right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.btn-bottom {
+  margin-left: 10px;
+}
+@media (min-width: 500px) {
+  .btn-bottom {
+    visibility: hidden;
+  }
+}
+.btn-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 0 #999;
+  cursor: pointer;
+  background: green;
+  color: black;
+  text-decoration: none;
+}
+.btn-bottom a {
+  color: black;
+}
+.btn-bottom:hover {
+  background-color: #3e8e41;
+}
+.btn-top {
+  margin: 0 auto;
+}
+.btn-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 0 #999;
+  cursor: pointer;
+  background: green;
+  color: black;
+  text-decoration: none;
+}
+.btn-top a {
+  color: black;
+}
+.btn-top:hover {
+  background-color: #3e8e41;
 }
 .services {
   display: flex;
@@ -133,6 +259,12 @@ html {
   .services {
     flex-direction: column;
     align-items: center;
+    align-content: center;
+  }
+}
+@media (max-width: 800px) {
+  .services {
+    flex-wrap: wrap;
   }
 }
 .services .information {
@@ -142,7 +274,8 @@ html {
 }
 @media (max-width: 500px) {
   .services .information {
-    margin-top: 10px;
+    width: 100%;
+    padding: 0 auto;
   }
 }
 .services .information img {
@@ -158,9 +291,112 @@ html {
   text-align: justify;
   text-justify: inter-word;
 }
+@media (max-width: 500px) {
+  .information p {
+    padding: 0 10px;
+  }
+}
+.information ul.a {
+  column-count: 2;
+  list-style-type: circle;
+  float: initial;
+}
+.information {
+  margin: 20px;
+}
 .information .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+.contact h2 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 3rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.submit {
+  background-color: green;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: #45a049;
+}
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 500px) {
+  .column,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.about-script {
+  margin: auto;
+  width: 70%;
+  border-bottom: 2px solid green;
+}
+.about-script h1 {
+  text-align: center;
+  margin-bottom: 0;
+}
+.about-script p {
+  padding: 30px;
+  margin: 0 50px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .about-script p {
+    margin: 0 auto;
+    padding: 15px;
+  }
+}
+.team-members {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  margin: 0 auto;
+}
+.team-members .role {
+  width: 260px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.team-members .role .member-info {
+  padding: 10px;
+}
+.team-members .role .member-info h4 {
+  margin-top: 10px;
+}
+.member-info h3 {
+  margin-bottom: 5px;
 }

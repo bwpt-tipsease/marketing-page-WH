@@ -1,0 +1,249 @@
+.container {
+  width: 100%;
+  height: 100%;
+ margin: 0 auto;
+}
+
+.about-tips {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  height: 90%;
+  width: 100%;
+  justify-content: center;
+  
+
+  .black-box {
+    width: 400px;
+    height: 450px;
+    background-color: black;
+    opacity: 0.8;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 20px;
+    @media @phone {
+      width: 95%;
+      border-radius: 10px;
+      margin:0 5px;
+      padding: 0 5px;
+    }
+    .CTA {
+      width: 350px;
+      text-align: justify;
+      margin: 0 auto;
+      color: green;
+      @media @phone {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .ctabuttons {
+        @media @phone {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-around;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.CTA {
+  p {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}
+
+
+
+i {
+  border: solid green;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+}
+
+
+.btn-bottom {
+  margin-left: 10px;
+  @media (min-width: 500px) {
+    visibility: hidden;
+  }
+}
+
+.btn-bottom {
+  .button-mixin(@btn-color, @nav-bg);
+}
+
+.btn-top {
+  margin: 0 auto;
+}
+.btn-top {
+  .button-mixin(@btn-color, @nav-bg);
+}
+
+.services {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  @media @phone {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+  @media @tablet {
+    flex-wrap: wrap;
+  }
+  .information {
+    width: 300px;
+    margin-top: 40px;
+    line-height: 1.5rem;
+    @media @phone {
+      width: 100%;
+      padding: 0 auto;
+    }
+    img {
+      height: 40px;
+      width: 40px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.information {
+  h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+.information {
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+    @media @phone {
+      padding: 0 10px;
+    }
+  }
+}
+.information {
+  ul.a {
+    column-count: 2;
+    list-style-type: circle;
+    float: initial
+  }
+}
+.information {
+  margin: 20px;
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+}
+
+.contact {
+  h2 {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 3rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.submit {
+  background-color: green;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    background-color: #45a049;
+  }
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media @phone {
+  .column,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.about-script {
+  margin: auto;
+  width: 70%;
+  border-bottom: 2px solid green;
+  h1 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+
+.about-script {
+  p {
+    padding: 30px;
+    margin: 0 50px;
+    text-align: center;
+    @media @phone {
+      margin: 0 auto;
+      padding: 15px;
+    }
+  }
+}
+.team-members {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  margin: 0 auto;
+  .role {
+    width: 260px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 10px;
+    .member-info {
+      padding: 10px;
+      h4 {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.member-info {
+  h3 {
+    margin-bottom: 5px;
+  }
+}
