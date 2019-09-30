@@ -1,0 +1,30 @@
+.center () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-mixin (@bg-color, @font-color) {
+.center();
+    width: 150px;
+    height: 50px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0 0 #999;
+    cursor: pointer;
+    background: @bg-color;
+    color: @font-color;
+    text-decoration: none;
+    a {
+        color: black;
+    }
+      &:hover {
+          background-color: #3e8e41;
+      }
+    }
+
+
+  
+   
